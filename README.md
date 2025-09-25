@@ -23,7 +23,7 @@ A comprehensive mental health support system built with AWS Bedrock and Lambda f
 ```bash
 # 1. Clone the repository
 git clone <your-repo-url>
-cd mental_health_agent_starter
+cd Mental_Health_Agent
 
 # 2. Install dependencies
 pip install -r requirements.txt
@@ -47,8 +47,6 @@ The Mental Health Agent is designed to be a supportive companion that:
 
 ## 🏗️ Architecture
 
-The system follows the same pattern as `medsynthetic_agent_starter`:
-
 - **API Contract**: `agent/openapi.yaml` defines the endpoints
 - **Lambda Functions**: `lambdas/` contains the business logic
 - **Infrastructure**: `infra/` has AWS IAM policies and trust relationships
@@ -59,7 +57,7 @@ The system follows the same pattern as `medsynthetic_agent_starter`:
 ## 📁 Project Structure
 
 ```
-mental_health_agent_starter/
+Mental_Health_Agent/
 ├── .github/
 │   └── workflows/
 │       └── ci.yml                # GitHub Actions CI/CD pipeline
