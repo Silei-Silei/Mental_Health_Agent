@@ -7,6 +7,9 @@
 
 A comprehensive mental health support system built with AWS Bedrock and Lambda functions. This agent provides empathetic conversation, daily check-ins, mental health evaluation, personalized recommendations, and proactive check-in scheduling.
 
+The Chatbot can be accessed through:
+https://mentalhealthagent-b24hj6mvbyvxesh6y7geb4.streamlit.app/
+
 ## 🌟 Features
 
 - 💬 **Empathetic Chat** - AI-powered conversations with emotional support
@@ -23,7 +26,7 @@ A comprehensive mental health support system built with AWS Bedrock and Lambda f
 ```bash
 # 1. Clone the repository
 git clone <your-repo-url>
-cd mental_health_agent_starter
+cd Mental_Health_Agent
 
 # 2. Install dependencies
 pip install -r requirements.txt
@@ -85,9 +88,6 @@ graph TD
 - **Adaptive Scheduling**: Check-in frequency adjusts based on user engagement and mental health trends
 
 ## 🏗️ Architecture
-
-The system follows the same pattern as `medsynthetic_agent_starter`:
-
 - **API Contract**: `agent/openapi.yaml` defines the endpoints
 - **Lambda Functions**: `lambdas/` contains the business logic
 - **Infrastructure**: `infra/` has AWS IAM policies and trust relationships
@@ -98,7 +98,7 @@ The system follows the same pattern as `medsynthetic_agent_starter`:
 ## 📁 Project Structure
 
 ```
-mental_health_agent_starter/
+Mental_Health_Agent/
 ├── .github/
 │   └── workflows/
 │       └── ci.yml                # GitHub Actions CI/CD pipeline
