@@ -1,0 +1,20 @@
+{
+    "Version": "2012-10-17",
+    "Statement": [
+        {
+            "Effect": "Allow",
+            "Action": [
+                "lambda:*",
+                "iam:PassRole",
+                "iam:GetRole",
+                "iam:CreateRole",
+                "iam:AttachRolePolicy",
+                "iam:PutRolePolicy",
+                "s3:*",
+                "bedrock:InvokeModel",
+                "apigateway:*"
+            ],
+            "Resource": "*"
+        }
+    ]
+}
