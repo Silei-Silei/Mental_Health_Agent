@@ -95,45 +95,6 @@ Mental_Health_Agent/
 └── streamlit_playground.py       # Web-based testing interface
 ```
 
-## 🌐 Cloud Deployment Options
-
-**Want to share your Mental Health Agent without requiring others to deploy AWS infrastructure?**
-
-### Option 1: Streamlit Cloud (Recommended)
-Deploy to Streamlit Cloud for instant public access:
-
-1. **Push to GitHub**:
-   ```bash
-   git add .
-   git commit -m "Add Streamlit Cloud deployment"
-   git push origin main
-   ```
-
-2. **Deploy to Streamlit Cloud**:
-   - Go to [share.streamlit.io](https://share.streamlit.io/)
-   - Connect your GitHub repository
-   - Select `streamlit_app.py` as main file
-   - Set environment variables: `API_BASE` and `MH_BUCKET`
-   - Deploy!
-
-3. **Share the URL**: `https://your-app.streamlit.app`
-
-**Benefits**: Free hosting, instant access, no AWS setup required for users
-
-### Option 2: Other Cloud Platforms
-- **Heroku**: `streamlit_app.py` + `Procfile`
-- **Railway**: Auto-detect Python, set env vars
-- **Render**: Web service with build/start commands
-- **Google Cloud Run**: Containerized deployment
-
-### Option 3: Public API
-Make your API Gateway publicly accessible:
-- Remove API key requirements
-- Enable CORS
-- Add rate limiting
-- Share API URL: `https://your-api.execute-api.region.amazonaws.com`
-
-**See [DEPLOYMENT_CLOUD.md](DEPLOYMENT_CLOUD.md) for detailed instructions.**
 
 ## 🚀 Deployment Guide
 
@@ -273,19 +234,3 @@ This section provides step-by-step instructions for deploying the Mental Health 
 - Launches the Streamlit playground
 - Provides helpful debugging output
 
-### Step 6: Production Considerations
-
-1. **Custom Domain** (Optional):
-   ```bash
-   aws apigatewayv2 create-domain-name --domain-name your-domain.com --domain-name-configurations CertificateArn=YOUR_CERT_ARN
-   ```
-
-2. **Monitoring Setup**:
-   - Enable CloudWatch logging
-   - Set up alarms for errors
-   - Monitor API Gateway metrics
-
-3. **Security Hardening**:
-   - Enable API key authentication
-   - Set up CORS policies
-   - Implement rate limiting
