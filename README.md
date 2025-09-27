@@ -7,8 +7,6 @@
 
 A comprehensive mental health support system built with AWS Bedrock and Lambda functions. This agent provides empathetic conversation, daily check-ins, mental health evaluation, personalized recommendations, and proactive check-in scheduling.
 
-The Chatbot can be accessed through:
-https://mentalhealthagent-b24hj6mvbyvxesh6y7geb4.streamlit.app/
 
 ## 🌟 Features
 
