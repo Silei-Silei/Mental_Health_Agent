@@ -23,7 +23,7 @@ A comprehensive mental health support agent. This agent provides empathetic conv
 **For immediate testing:**
 ```bash
 # 1. Clone the repository
-git clone <your-repo-url>
+git clone https://github.com/Silei-Silei/Mental_Health_Agent.git
 cd Mental_Health_Agent
 
 # 2. Install dependencies
