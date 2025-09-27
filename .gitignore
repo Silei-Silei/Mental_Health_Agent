@@ -73,7 +73,6 @@ deployments/
 # Test files
 test_*.py
 *_test.py
-tests/
 
 # Environment variables
 .env.local
