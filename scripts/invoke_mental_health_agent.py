@@ -5,6 +5,7 @@ import datetime
 import boto3
 import requests
 import uuid
+from typing import Optional
 
 
 def invoke_bedrock_chat(message: str, region: str):
@@ -27,7 +28,7 @@ def invoke_bedrock_chat(message: str, region: str):
 
 
 def invoke_api(
-    base_url: str, path: str, payload: dict, headers: dict = None, timeout: int = 30
+    base_url: str, path: str, payload: dict, headers: Optional[dict] = None, timeout: int = 30
 ):
     """
     Call any HTTP endpoint with POST and JSON body.

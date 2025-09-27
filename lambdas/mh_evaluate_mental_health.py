@@ -382,7 +382,7 @@ def identify_risk_factors(
             all_concerns.extend(checkin.get("concerns", []))
 
         # Count concern frequency
-        concern_counts = {}
+        concern_counts: dict[str, int] = {}
         for concern in all_concerns:
             concern_counts[concern] = concern_counts.get(concern, 0) + 1
 

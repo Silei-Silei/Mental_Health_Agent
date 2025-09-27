@@ -331,7 +331,7 @@ def generate_personalized_recommendations(
                             content, current_mood, urgency_level, user_context
                         )
                         content_with_score = content.copy()
-                        content_with_score["priority_score"] = priority_score
+                        content_with_score["priority_score"] = str(priority_score)
                         recommendations.append(content_with_score)
 
     # Sort by priority score and return top recommendations
