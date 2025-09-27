@@ -29,13 +29,9 @@ cd Mental_Health_Agent
 # 2. Install dependencies
 pip install -r requirements.txt
 
-# 3. Run the playground (requires AWS deployment first)
+# 3. Run the playground (requires api provided first)
 streamlit run streamlit_playground.py
 ```
-
-**For full deployment, see the [Deployment Guide](#-deployment-guide) below.**
-
-**For instant public access, see [Cloud Deployment](#-cloud-deployment-options) below.**
 
 ## 🧠 Overview
 
