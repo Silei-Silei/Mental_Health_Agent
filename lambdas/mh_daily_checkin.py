@@ -141,8 +141,8 @@ def calculate_wellness_score(responses: Dict) -> float:
         "social_connection": 0.05,
     }
 
-    score = 0
-    total_weight = 0
+    score = 0.0
+    total_weight = 0.0
 
     for factor, weight in weights.items():
         if factor in responses:
@@ -150,7 +150,7 @@ def calculate_wellness_score(responses: Dict) -> float:
             # Invert stress and anxiety (lower is better)
             if factor in ["stress_level", "anxiety_level"]:
                 value = 11 - value  # Convert 1-10 to 10-1
-            score += float(value) * weight
+            score += value * weight
             total_weight += weight
 
     return round((score / total_weight) * 10, 1) if total_weight > 0 else 5.0
