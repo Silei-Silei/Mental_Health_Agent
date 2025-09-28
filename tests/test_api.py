@@ -6,13 +6,22 @@ import pytest
 import json
 import os
 import sys
+from unittest.mock import patch
 
 # Add the lambdas directory to the path for imports
 sys.path.insert(0, os.path.join(os.path.dirname(__file__), "..", "lambdas"))
 
+# Mock AWS environment variables before importing any modules
+os.environ["AWS_REGION"] = "us-east-1"
+os.environ["MH_BUCKET"] = "test-bucket"
 
-def test_import_modules():
+
+@patch("boto3.client")
+def test_import_modules(mock_boto_client):
     """Test that all lambda modules can be imported without errors"""
+    # Mock boto3 clients to prevent AWS calls
+    mock_boto_client.return_value = None
+    
     try:
         import mh_chat_handler
         import mh_daily_checkin
@@ -27,8 +36,10 @@ def test_import_modules():
         pytest.fail(f"Failed to import module: {e}")
 
 
-def test_chat_handler_structure():
+@patch("boto3.client")
+def test_chat_handler_structure(mock_boto_client):
     """Test that chat handler has required functions"""
+    mock_boto_client.return_value = None
     import mh_chat_handler
 
     # Check if handler function exists
@@ -40,8 +51,10 @@ def test_chat_handler_structure():
     assert hasattr(mh_chat_handler, "store_conversation")
 
 
-def test_daily_checkin_structure():
+@patch("boto3.client")
+def test_daily_checkin_structure(mock_boto_client):
     """Test that daily checkin handler has required functions"""
+    mock_boto_client.return_value = None
     import mh_daily_checkin
 
     # Check if handler function exists
@@ -49,8 +62,10 @@ def test_daily_checkin_structure():
     assert callable(mh_daily_checkin.handler)
 
 
-def test_evaluation_structure():
+@patch("boto3.client")
+def test_evaluation_structure(mock_boto_client):
     """Test that evaluation handler has required functions"""
+    mock_boto_client.return_value = None
     import mh_evaluate_mental_health
 
     # Check if handler function exists
@@ -58,8 +73,10 @@ def test_evaluation_structure():
     assert callable(mh_evaluate_mental_health.handler)
 
 
-def test_recommendations_structure():
+@patch("boto3.client")
+def test_recommendations_structure(mock_boto_client):
     """Test that recommendations handler has required functions"""
+    mock_boto_client.return_value = None
     import mh_recommendations
 
     # Check if handler function exists
@@ -67,8 +84,10 @@ def test_recommendations_structure():
     assert callable(mh_recommendations.handler)
 
 
-def test_schedule_structure():
+@patch("boto3.client")
+def test_schedule_structure(mock_boto_client):
     """Test that schedule handler has required functions"""
+    mock_boto_client.return_value = None
     import mh_schedule_checkin
 
     # Check if handler function exists
