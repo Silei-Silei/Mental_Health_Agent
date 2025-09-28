@@ -71,9 +71,8 @@ tmp/
 deployments/
 
 # Test files
-test_*.py
-*_test.py
-tests/
+# test_*.py  # Commented out to allow test files
+# *_test.py  # Commented out to allow test files
 
 # Environment variables
 .env.local
