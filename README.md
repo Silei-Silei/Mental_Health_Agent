@@ -7,6 +7,8 @@
 
 A comprehensive mental health support agent. This agent provides empathetic conversation, daily check-ins, mental health evaluation, personalized recommendations, and proactive check-in scheduling.
 
+Online App can be accessed: 
+https://mentalhealthagent-qhsvdfgec2jvfsj4faqbqg.streamlit.app/
 
 ## 🌟 Features
 
